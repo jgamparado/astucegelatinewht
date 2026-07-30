@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>L'Astuce de la Gélatine Rose — programme culinaire de 21 jours</title>
+<meta name="description" content="Un programme numérique de 21 jours autour d'une recette de gélatine rose : recettes, plan quotidien et suivi d'habitudes. Accès immédiat, paiement unique de 17 €.">
+<meta name="theme-color" content="#fbf2f6">
+<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="L'Astuce de la Gélatine Rose — programme culinaire de 21 jours">
+<meta property="og:description" content="Recettes, plan quotidien et suivi d'habitudes sur 21 jours. Accès immédiat, paiement unique de 17 €.">
+<meta property="og:image" content="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fond:#fbeaf1;
+  --papier:#fffafc;
+  --rose-pale:#fce0ec;
+  --rose-clair:#f9cfe0;
+  --rose:#cf2270;
+  --framboise:#7d1442;
+  --encre:#2a1620;
+  --encre-doux:#8f7280;
+  --ligne:#f2d3e0;
+  --or:#c39a5a;
+  --vert:#2f8f68;
+  --ombre:0 22px 48px -28px rgba(120,20,65,.42);
+  --ombre-douce:0 8px 22px -14px rgba(120,20,65,.28);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:
+    radial-gradient(ellipse 720px 460px at 50% -6%,#f7c6dc 0%,rgba(247,198,220,0) 62%),
+    radial-gradient(ellipse 560px 420px at 96% 32%,#fad3e4 0%,rgba(250,211,228,0) 58%),
+    radial-gradient(ellipse 520px 400px at 2% 74%,#f9d7e6 0%,rgba(249,215,230,0) 58%),
+    var(--fond);
+  background-attachment:fixed;
+  color:var(--encre);
+  font-family:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16.5px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* ---------- structure ---------- */
+.feuille{
+  max-width:680px;
+  margin:0 auto;
+  padding:0 22px;
+}
+.bloc{padding:52px 0;border-top:1px solid var(--ligne)}
+.bloc:first-of-type{border-top:none}
+@media (max-width:520px){
+  .bloc{padding:42px 0}
+  .feuille{padding:0 18px}
+}
+
+.oeil{
+  font-size:11.5px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--rose);
+  margin:0 0 14px;
+}
+h1,h2,h3{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:400;
+  font-optical-sizing:auto;
+  font-variation-settings:"SOFT" 60,"WONK" 1;
+  color:var(--framboise);
+  margin:0;
+  letter-spacing:-.015em;
+}
+h1{
+  font-size:clamp(40px,9.6vw,66px);
+  line-height:1.0;
+  margin-bottom:20px;
+}
+h1 .fine{
+  display:block;
+  font-weight:300;
+  font-size:.52em;
+  letter-spacing:.02em;
+  color:var(--rose);
+  margin-bottom:.16em;
+}
+h1 em{
+  font-style:italic;
+  font-weight:500;
+  font-variation-settings:"SOFT" 100,"WONK" 1;
+}
+h2{
+  font-size:clamp(25px,5.2vw,32px);
+  line-height:1.15;
+  margin-bottom:16px;
+}
+h3{font-size:19px;line-height:1.3;margin-bottom:6px}
+p{margin:0 0 16px}
+p:last-child{margin-bottom:0}
+.doux{color:var(--encre-doux)}
+.chapeau{font-size:18px;line-height:1.6;color:var(--encre-doux);margin-bottom:26px}
+
+/* ---------- en-tête ---------- */
+.marque{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  padding:22px 0 4px;
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--encre-doux);
+  font-weight:600;
+}
+.marque b{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:600;
+  font-size:15px;
+  letter-spacing:.02em;
+  text-transform:none;
+  color:var(--framboise);
+}
+
+.hero{padding-top:26px;text-align:center}
+.hero .oeil{margin-bottom:16px}
+.hero .chapeau{max-width:30em;margin-left:auto;margin-right:auto}
+
+/* ---------- la gélatine (élément signature) ---------- */
+.demoulage{
+  position:relative;
+  margin:34px auto 40px;
+  width:min(330px,76vw);
+}
+.gelee{
+  --dent:16px;
+  position:relative;
+  height:212px;
+  border-radius:30px 30px 12px 12px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,0) 38%),
+    linear-gradient(168deg,#f9b3d1 0%,#f183b8 40%,#dc4a90 78%,#c22a72 100%);
+  -webkit-mask:radial-gradient(var(--dent) at 50% 100%,#0000 98%,#000 100%) 50% 0/calc(var(--dent)*2) 100%;
+  mask:radial-gradient(var(--dent) at 50% 100%,#0000 98%,#000 100%) 50% 0/calc(var(--dent)*2) 100%;
+  transform-origin:50% 100%;
+  animation:demouler 1.15s cubic-bezier(.34,1.4,.5,1) both;
+}
+/* cannelures du moule */
+.gelee::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:repeating-linear-gradient(90deg,
+    rgba(255,255,255,.16) 0 2px,
+    rgba(255,255,255,0) 2px 27px);
+}
+/* reflet */
+.gelee::after{
+  content:"";
+  position:absolute;
+  left:13%;
+  top:11%;
+  width:36%;
+  height:26%;
+  border-radius:50%;
+  background:radial-gradient(closest-side,rgba(255,255,255,.72),rgba(255,255,255,0));
+  filter:blur(1px);
+}
+.assiette{
+  position:absolute;
+  left:50%;
+  bottom:-16px;
+  width:118%;
+  height:34px;
+  transform:translateX(-50%);
+  background:radial-gradient(closest-side,rgba(120,20,65,.26),rgba(120,20,65,0) 78%);
+  z-index:-1;
+}
+@keyframes demouler{
+  0%{opacity:0;transform:translateY(-14px) scaleX(.96) scaleY(1.06)}
+  50%{opacity:1;transform:translateY(0) scaleX(1.04) scaleY(.94)}
+  74%{transform:scaleX(.985) scaleY(1.025)}
+  88%{transform:scaleX(1.008) scaleY(.993)}
+  100%{opacity:1;transform:none}
+}
+
+/* ---------- prix + appel à l'action ---------- */
+.prix{
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:16px;
+}
+.prix .montant{
+  font-family:Fraunces,Georgia,serif;
+  font-size:50px;
+  font-weight:600;
+  line-height:1;
+  color:var(--framboise);
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.prix .mention{font-size:14px;color:var(--encre-doux);font-weight:600}
+
+.action{
+  display:block;
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
+  padding:19px 24px;
+  background:var(--rose);
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  font-family:Manrope,sans-serif;
+  font-size:17px;
+  font-weight:700;
+  text-align:center;
+  text-decoration:none;
+  cursor:pointer;
+  box-shadow:var(--ombre);
+  transition:background .18s ease,transform .18s ease;
+}
+.action:hover{background:var(--framboise)}
+.action:active{transform:translateY(1px)}
+.action:focus-visible{outline:3px solid var(--framboise);outline-offset:3px}
+.sous-action{
+  text-align:center;
+  font-size:13.5px;
+  color:var(--encre-doux);
+  margin:14px 0 0;
+}
+
+/* ---------- deux colonnes : c'est / ce n'est pas ---------- */
+.balance{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:8px;
+}
+@media (max-width:560px){.balance{grid-template-columns:1fr}}
+.carte{
+  background:var(--papier);
+  border:1px solid var(--ligne);
+  border-radius:18px;
+  padding:22px 20px;
+  box-shadow:var(--ombre-douce);
+}
+.carte h3{
+  font-family:Manrope,sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--encre-doux);
+  margin-bottom:14px;
+}
+.carte ul{list-style:none;margin:0;padding:0}
+.carte li{
+  position:relative;
+  padding-left:26px;
+  margin-bottom:11px;
+  font-size:15.5px;
+  line-height:1.5;
+}
+.carte li:last-child{margin-bottom:0}
+.carte li::before{
+  position:absolute;
+  left:0;
+  top:0;
+  font-weight:700;
+}
+.carte.oui li::before{content:"✓";color:var(--vert)}
+.carte.non li::before{content:"—";color:var(--encre-doux)}
+.carte.non li{color:var(--encre-doux)}
+
+/* ---------- calendrier 21 jours ---------- */
+.phases{display:flex;flex-direction:column;gap:22px;margin-top:6px}
+.phase-titre{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  margin-bottom:10px;
+}
+.phase-titre .jours{
+  font-family:Fraunces,Georgia,serif;
+  font-size:13px;
+  font-weight:600;
+  color:var(--rose);
+  letter-spacing:.04em;
+  white-space:nowrap;
+}
+.phase-titre .nom{font-size:15.5px;font-weight:700}
+.grille{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:7px;
+}
+.jour{
+  aspect-ratio:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:11px;
+  background:var(--rose-pale);
+  border:1px solid var(--ligne);
+  font-family:Fraunces,Georgia,serif;
+  font-size:15px;
+  font-weight:400;
+  color:var(--framboise);
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.phase p{font-size:15px;color:var(--encre-doux);margin:12px 0 0}
+
+/* ---------- contenu inclus ---------- */
+.inclus{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.inclus li{
+  display:flex;
+  gap:14px;
+  align-items:baseline;
+  padding:15px 0;
+  border-bottom:1px solid var(--ligne);
+}
+.inclus li:last-child{border-bottom:none}
+.inclus .rang{
+  font-family:Fraunces,Georgia,serif;
+  font-size:13px;
+  color:var(--or);
+  min-width:22px;
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.inclus .quoi{font-weight:700;font-size:16px;display:block;margin-bottom:2px}
+.inclus .detail{font-size:14.5px;color:var(--encre-doux);line-height:1.5}
+
+/* ---------- questions ---------- */
+details{
+  border-bottom:1px solid var(--ligne);
+  padding:4px 0;
+}
+details summary{
+  cursor:pointer;
+  list-style:none;
+  padding:15px 30px 15px 0;
+  font-weight:700;
+  font-size:16px;
+  position:relative;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{
+  content:"+";
+  position:absolute;
+  right:4px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:20px;
+  font-weight:400;
+  color:var(--rose);
+}
+details[open] summary::after{content:"–"}
+details summary:focus-visible{outline:2px solid var(--framboise);outline-offset:2px;border-radius:4px}
+details .reponse{
+  padding:0 4px 18px 0;
+  font-size:15.5px;
+  color:var(--encre-doux);
+}
+
+/* ---------- encart d'achat ---------- */
+.encart{
+  background:var(--papier);
+  border:1px solid var(--rose-clair);
+  border-radius:24px;
+  padding:34px 26px;
+  text-align:center;
+  box-shadow:var(--ombre);
+}
+.encart h2{margin-bottom:10px}
+.encart .recap{
+  font-size:15px;
+  color:var(--encre-doux);
+  margin:0 auto 22px;
+  max-width:34em;
+}
+.detail-prix{
+  font-size:14px;
+  color:var(--encre-doux);
+  border-top:1px solid var(--ligne);
+  margin-top:24px;
+  padding-top:18px;
+  line-height:1.6;
+}
+
+/* ---------- avertissement + pied ---------- */
+.avertissement{
+  background:var(--rose-pale);
+  border:1px solid var(--ligne);
+  border-radius:16px;
+  padding:22px 20px;
+  font-size:14px;
+  line-height:1.6;
+  color:var(--encre-doux);
+}
+.avertissement strong{color:var(--encre)}
+.pied{
+  padding:34px 0 46px;
+  border-top:1px solid var(--ligne);
+  font-size:13px;
+  color:var(--encre-doux);
+  text-align:center;
+}
+.pied nav{margin-bottom:12px;line-height:2.1}
+.pied nav a{margin:0 9px;text-decoration:underline}
+
+/* ---------- filet décoratif ---------- */
+.filet{
+  display:block;
+  margin:0 auto;
+  color:var(--or);
+  opacity:.75;
+}
+
+/* ---------- apparition au défilement ----------
+   Le contenu est visible par défaut : l'animation n'est activée
+   que si le script s'exécute (classe .anim sur <html>). */
+.anim .monte{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.anim .monte.vu{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .gelee{animation:none}
+  .anim .monte{opacity:1;transform:none;transition:none}
+  .action{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="feuille">
+
+  <div class="marque"><b>Gélatine Rose</b> <span>Pink Gelatin Trick</span></div>
+
+  <!-- ============ EN-TÊTE ============ -->
+  <header class="bloc hero">
+    <p class="oeil">Programme culinaire · 21 jours</p>
+    <h1><span class="fine">L'Astuce de la</span><em>Gélatine Rose</em></h1>
+    <p class="chapeau">Une recette de gélatine rose, déclinée en 21 jours. Un guide en PDF avec le plan quotidien, les recettes, la liste de courses et le carnet de suivi.</p>
+
+    <div class="demoulage">
+      <div class="gelee" aria-hidden="true"></div>
+      <div class="assiette" aria-hidden="true"></div>
+    </div>
+
+    <div class="prix">
+      <span class="montant">17 €</span>
+      <span class="mention">paiement unique</span>
+    </div>
+    <a class="action" href="https://checkout.kashpay.com.br/checkout/checkout-1784836490229">Recevoir le guide</a>
+    <p class="sous-action">Téléchargement immédiat après le paiement · Aucun abonnement</p>
+  </header>
+
+  <!-- ============ CE QUE C'EST ============ -->
+  <section class="bloc monte">
+    <p class="oeil">Pour être clair</p>
+    <h2>Ce que vous achetez, exactement</h2>
+    <p class="chapeau">Un guide numérique à télécharger. Pas un produit livré chez vous, pas un complément alimentaire.</p>
+
+    <div class="balance">
+      <div class="carte oui">
+        <h3>C'est</h3>
+        <ul>
+          <li>Un guide numérique en PDF, à lire sur téléphone, tablette ou ordinateur</li>
+          <li>Une recette de base à la gélatine, plus ses variations</li>
+          <li>Un plan jour par jour sur 21 jours</li>
+          <li>Un fichier à télécharger et à garder</li>
+        </ul>
+      </div>
+      <div class="carte non">
+        <h3>Ce n'est pas</h3>
+        <ul>
+          <li>Ni un médicament, ni un complément alimentaire</li>
+          <li>Ni un traitement, ni un avis médical</li>
+          <li>Pas un régime restrictif ni un programme de perte de poids</li>
+          <li>Aucun abonnement, aucun prélèvement récurrent</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LES 21 JOURS ============ -->
+  <section class="bloc monte">
+    <p class="oeil">Le déroulé</p>
+    <h2>Trois semaines, trois temps</h2>
+    <p class="chapeau">Chaque journée tient en une page : la recette du jour, la quantité d'eau visée, et une case à cocher.</p>
+
+    <div class="phases">
+      <div class="phase">
+        <div class="phase-titre"><span class="jours">Jours 1–7</span><span class="nom">Préparation</span></div>
+        <div class="grille">
+          <div class="jour">1</div><div class="jour">2</div><div class="jour">3</div><div class="jour">4</div><div class="jour">5</div><div class="jour">6</div><div class="jour">7</div>
+        </div>
+        <p>Vous préparez votre cuisine, vous faites vos courses une bonne fois, et vous réalisez la recette de base jusqu'à la réussir les yeux fermés.</p>
+      </div>
+
+      <div class="phase">
+        <div class="phase-titre"><span class="jours">Jours 8–14</span><span class="nom">Routine</span></div>
+        <div class="grille">
+          <div class="jour">8</div><div class="jour">9</div><div class="jour">10</div><div class="jour">11</div><div class="jour">12</div><div class="jour">13</div><div class="jour">14</div>
+        </div>
+        <p>Les variations arrivent : bol aux fruits, shot du matin. Vous ajoutez le volet hydratation pour que la recette s'installe dans une vraie journée, pas dans une journée idéale.</p>
+      </div>
+
+      <div class="phase">
+        <div class="phase-titre"><span class="jours">Jours 15–21</span><span class="nom">Constance</span></div>
+        <div class="grille">
+          <div class="jour">15</div><div class="jour">16</div><div class="jour">17</div><div class="jour">18</div><div class="jour">19</div><div class="jour">20</div><div class="jour">21</div>
+        </div>
+        <p>On travaille ce qui fait abandonner les gens : les jours sans envie, les week-ends, les imprévus. Et comment continuer après le 21<sup>e</sup> jour.</p>
+      </div>
+    </div>
+  </section>
+
+  <svg class="filet" width="72" height="10" viewBox="0 0 72 10" fill="none" aria-hidden="true">
+    <path d="M2 8c4 0 4-6 8-6s4 6 8 6 4-6 8-6 4 6 8 6 4-6 8-6 4 6 8 6 4-6 8-6 4 6 8 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+  </svg>
+
+  <!-- ============ CE QUI EST INCLUS ============ -->
+  <section class="bloc monte">
+    <p class="oeil">Contenu</p>
+    <h2>Ce qui est inclus</h2>
+
+    <ul class="inclus">
+      <li>
+        <span class="rang">01</span>
+        <span><span class="quoi">Le protocole</span><span class="detail">La méthode complète, expliquée étape par étape, avec les proportions et le temps de prise.</span></span>
+      </li>
+      <li>
+        <span class="rang">02</span>
+        <span><span class="quoi">Les recettes</span><span class="detail">La gélatine rose classique, le bol rose aux fruits et le shot rose du matin, avec les variations.</span></span>
+      </li>
+      <li>
+        <span class="rang">03</span>
+        <span><span class="quoi">L'hydratation</span><span class="detail">Un repère simple de quantité d'eau sur la journée, à ajuster selon vos habitudes.</span></span>
+      </li>
+      <li>
+        <span class="rang">04</span>
+        <span><span class="quoi">Le carnet de suivi</span><span class="detail">Une page à imprimer, avec une case à cocher par jour et de la place pour vos notes.</span></span>
+      </li>
+      <li>
+        <span class="rang">05</span>
+        <span><span class="quoi">La liste de courses</span><span class="detail">Les ingrédients d'une semaine, regroupés par rayon.</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ POUR QUI ============ -->
+  <section class="bloc monte">
+    <p class="oeil">Avant d'acheter</p>
+    <h2>À qui ça s'adresse</h2>
+    <p>Ce programme est fait pour vous si vous aimez cuisiner simple, si vous cherchez une recette à répéter sans y réfléchir, et si vous savez qu'un cadre de 21 jours vous aide à tenir.</p>
+    <p class="doux">Il ne vous conviendra pas si vous attendez un résultat physique précis, si vous suivez un régime prescrit par un professionnel de santé, ou si vous ne consommez pas de gélatine d'origine animale : les recettes en contiennent.</p>
+  </section>
+
+  <!-- ============ QUESTIONS ============ -->
+  <section class="bloc monte">
+    <p class="oeil">Questions fréquentes</p>
+    <h2>Ce qu'on nous demande</h2>
+
+    <details>
+      <summary>Comment je reçois le guide ?</summary>
+      <div class="reponse">Par e-mail, juste après le paiement. Vous recevez un lien de téléchargement du guide en PDF. Rien à installer, aucun compte à créer.</div>
+    </details>
+    <details>
+      <summary>Est-ce un abonnement ?</summary>
+      <div class="reponse">Non. Vous payez 17 € une seule fois. Aucun prélèvement automatique, aucune reconduction.</div>
+    </details>
+    <details>
+      <summary>Le fichier est-il à moi ?</summary>
+      <div class="reponse">Oui. Une fois téléchargé, le guide vous appartient : vous le gardez sur votre appareil, vous pouvez l'imprimer et le relire quand vous voulez.</div>
+    </details>
+    <details>
+      <summary>Faut-il du matériel particulier ?</summary>
+      <div class="reponse">Non. Une casserole, un fouet, des ramequins ou un moule, et un réfrigérateur. Les ingrédients se trouvent en supermarché.</div>
+    </details>
+    <details>
+      <summary>Est-ce adapté à un régime végétarien ou halal ?</summary>
+      <div class="reponse">Les recettes utilisent de la gélatine d'origine animale. Si cela ne vous convient pas, ce programme n'est pas adapté et nous vous déconseillons de l'acheter.</div>
+    </details>
+    <details>
+      <summary>Puis-je le suivre si j'ai un problème de santé ?</summary>
+      <div class="reponse">Il s'agit de recettes de cuisine, pas d'un protocole de santé. En cas de maladie, de grossesse, d'allaitement, d'allergie ou de traitement en cours, demandez l'avis de votre médecin avant de modifier votre alimentation.</div>
+    </details>
+    <details>
+      <summary>Quelles sont les conditions de rétractation ?</summary>
+      <div class="reponse">Il s'agit d'un contenu numérique fourni immédiatement. En validant votre commande, vous demandez son exécution immédiate et renoncez à votre droit de rétractation de 14 jours, conformément à l'article L221-28 du Code de la consommation. Si le fichier est illisible ou ne correspond pas à sa description, écrivez-nous : nous le remplaçons ou nous vous remboursons.</div>
+    </details>
+    <details>
+      <summary>Comment vous joindre ?</summary>
+      <div class="reponse">Par e-mail à <a href="mailto:contact@example.com">contact@example.com</a>. Nous répondons sous 48 heures ouvrées.</div>
+    </details>
+  </section>
+
+  <!-- ============ ACHAT ============ -->
+  <section class="bloc monte">
+    <div class="encart">
+      <p class="oeil">L'offre</p>
+      <h2>L'Astuce de la Gélatine Rose</h2>
+      <p class="recap">Le guide complet des 21 jours : le protocole, les recettes, le carnet de suivi et la liste de courses.</p>
+
+      <div class="prix">
+        <span class="montant">17 €</span>
+        <span class="mention">TTC · paiement unique</span>
+      </div>
+
+      <a class="action" href="https://checkout.kashpay.com.br/checkout/checkout-1784836490229">Recevoir le guide</a>
+      <p class="sous-action">Paiement sécurisé · Téléchargement immédiat · Aucun abonnement</p>
+
+      <p class="detail-prix">Guide numérique au format PDF. Lien de téléchargement envoyé par e-mail après confirmation du paiement. Paiement unique de 17 € TTC, sans reconduction.</p>
+    </div>
+  </section>
+
+  <!-- ============ AVERTISSEMENT ============ -->
+  <section class="bloc monte">
+    <div class="avertissement">
+      <p><strong>Information importante.</strong> L'Astuce de la Gélatine Rose est un programme culinaire et de bien-être à visée éducative. Ce n'est pas un médicament, ni un complément alimentaire, ni un dispositif médical, et il ne remplace en aucun cas l'avis d'un médecin, d'un pharmacien ou d'un diététicien.</p>
+      <p>Aucun résultat de santé, de perte de poids ou de transformation physique n'est promis ni garanti. Les recettes proposées s'inscrivent dans le cadre d'une alimentation variée et équilibrée et d'un mode de vie actif.</p>
+      <p style="margin-bottom:0">Si vous êtes enceinte ou allaitante, si vous suivez un traitement, ou si vous présentez une allergie ou une pathologie, consultez un professionnel de santé avant toute modification de votre alimentation.</p>
+    </div>
+  </section>
+
+  <!-- ============ PIED DE PAGE ============ -->
+  <footer class="pied">
+    <nav>
+      <a href="mailto:contact@example.com">contact@example.com</a>
+    </nav>
+    <p style="margin:0">© 2026 Gélatine Rose. Tous droits réservés.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.documentElement.classList.add('anim');
+  var cibles = document.querySelectorAll('.monte');
+  var observateur = new IntersectionObserver(function(entrees){
+    entrees.forEach(function(entree){
+      if(entree.isIntersecting){
+        entree.target.classList.add('vu');
+        observateur.unobserve(entree.target);
+      }
+    });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  cibles.forEach(function(el){observateur.observe(el)});
+})();
+</script>
+
+</body>
+</html>
