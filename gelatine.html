@@ -3,39 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>L'Astuce du Bicarbonate — programme culinaire de 21 jours</title>
-<meta name="description" content="Un programme numérique de 21 jours autour du bicarbonate alimentaire : recettes, plan quotidien et suivi d'habitudes. Accès immédiat, paiement unique de 17 €.">
-<meta name="theme-color" content="#eef5f9">
+<title>L'Astuce de la Gélatine Rose — programme culinaire de 21 jours</title>
+<meta name="description" content="Un programme numérique de 21 jours autour d'une recette de gélatine rose : recettes, plan quotidien et suivi d'habitudes. Accès immédiat, paiement unique de 17 €.">
+<meta name="theme-color" content="#fbf2f6">
 <meta property="og:type" content="website">
-<meta property="og:title" content="L'Astuce du Bicarbonate — programme culinaire de 21 jours">
+<meta property="og:title" content="L'Astuce de la Gélatine Rose — programme culinaire de 21 jours">
 <meta property="og:description" content="Recettes, plan quotidien et suivi d'habitudes sur 21 jours. Accès immédiat, paiement unique de 17 €.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --fond:#e8f1f6;
-  --papier:#fbfdfe;
-  --bleu-pale:#dcebf3;
-  --bleu-clair:#c2dcea;
-  --bleu:#1f7a9c;
-  --marine:#0f4257;
-  --encre:#15252e;
-  --encre-doux:#6b8391;
-  --ligne:#d5e6ef;
-  --safran:#8a6714;
+  --fond:#fbeaf1;
+  --papier:#fffafc;
+  --rose-pale:#fce0ec;
+  --rose-clair:#f9cfe0;
+  --rose:#cf2270;
+  --framboise:#7d1442;
+  --encre:#2a1620;
+  --encre-doux:#8f7280;
+  --ligne:#f2d3e0;
+  --or:#c39a5a;
   --vert:#2f8f68;
-  --ombre:0 22px 48px -28px rgba(15,66,87,.44);
-  --ombre-douce:0 8px 22px -14px rgba(15,66,87,.30);
+  --ombre:0 22px 48px -28px rgba(120,20,65,.42);
+  --ombre-douce:0 8px 22px -14px rgba(120,20,65,.28);
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
   margin:0;
   background:
-    radial-gradient(ellipse 720px 460px at 50% -6%,#c9e3f0 0%,rgba(201,227,240,0) 62%),
-    radial-gradient(ellipse 560px 420px at 96% 32%,#d3e9f2 0%,rgba(211,233,242,0) 58%),
-    radial-gradient(ellipse 520px 400px at 2% 74%,#d8ecf4 0%,rgba(216,236,244,0) 58%),
+    radial-gradient(ellipse 720px 460px at 50% -6%,#f7c6dc 0%,rgba(247,198,220,0) 62%),
+    radial-gradient(ellipse 560px 420px at 96% 32%,#fad3e4 0%,rgba(250,211,228,0) 58%),
+    radial-gradient(ellipse 520px 400px at 2% 74%,#f9d7e6 0%,rgba(249,215,230,0) 58%),
     var(--fond);
   background-attachment:fixed;
   color:var(--encre);
@@ -66,7 +66,7 @@ a{color:inherit}
   font-weight:700;
   letter-spacing:.16em;
   text-transform:uppercase;
-  color:var(--bleu);
+  color:var(--rose);
   margin:0 0 14px;
 }
 h1,h2,h3{
@@ -74,7 +74,7 @@ h1,h2,h3{
   font-weight:400;
   font-optical-sizing:auto;
   font-variation-settings:"SOFT" 60,"WONK" 1;
-  color:var(--marine);
+  color:var(--framboise);
   margin:0;
   letter-spacing:-.015em;
 }
@@ -88,7 +88,7 @@ h1 .fine{
   font-weight:300;
   font-size:.52em;
   letter-spacing:.02em;
-  color:var(--bleu);
+  color:var(--rose);
   margin-bottom:.16em;
 }
 h1 em{
@@ -125,100 +125,70 @@ p:last-child{margin-bottom:0}
   font-size:15px;
   letter-spacing:.02em;
   text-transform:none;
-  color:var(--marine);
+  color:var(--framboise);
 }
 
 .hero{padding-top:26px;text-align:center}
 .hero .oeil{margin-bottom:16px}
 .hero .chapeau{max-width:30em;margin-left:auto;margin-right:auto}
 
-/* ---------- le verre (élément signature) ---------- */
-.effervescence{
+/* ---------- la gélatine (élément signature) ---------- */
+.demoulage{
   position:relative;
-  margin:34px auto 44px;
-  width:min(300px,72vw);
+  margin:34px auto 40px;
+  width:min(330px,76vw);
 }
-.verre{
+.gelee{
+  --dent:16px;
   position:relative;
-  height:236px;
-  border-radius:16px 16px 46px 46px;
-  border:1px solid rgba(31,122,156,.26);
-  background:linear-gradient(102deg,
-    rgba(255,255,255,.66) 0%,
-    rgba(255,255,255,.18) 44%,
-    rgba(255,255,255,.54) 100%);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.55),var(--ombre);
-  overflow:hidden;
-}
-/* reflet vertical sur le verre */
-.verre::after{
-  content:"";
-  position:absolute;
-  left:9%;
-  top:6%;
-  width:12%;
-  height:64%;
-  border-radius:999px;
-  background:linear-gradient(180deg,rgba(255,255,255,.82),rgba(255,255,255,0));
-  filter:blur(.5px);
-}
-.eau{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  height:74%;
-  background:linear-gradient(180deg,#c4e3f1 0%,#82c4dd 42%,#3f9cc0 100%);
+  height:212px;
+  border-radius:30px 30px 12px 12px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,0) 38%),
+    linear-gradient(168deg,#f9b3d1 0%,#f183b8 40%,#dc4a90 78%,#c22a72 100%);
+  -webkit-mask:radial-gradient(var(--dent) at 50% 100%,#0000 98%,#000 100%) 50% 0/calc(var(--dent)*2) 100%;
+  mask:radial-gradient(var(--dent) at 50% 100%,#0000 98%,#000 100%) 50% 0/calc(var(--dent)*2) 100%;
   transform-origin:50% 100%;
-  animation:remplir 1.15s cubic-bezier(.34,1.3,.5,1) both;
+  animation:demouler 1.15s cubic-bezier(.34,1.4,.5,1) both;
 }
-/* surface de l'eau */
-.eau::before{
+/* cannelures du moule */
+.gelee::before{
   content:"";
   position:absolute;
-  left:0;
-  right:0;
-  top:-1px;
-  height:9px;
-  background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(255,255,255,0));
+  inset:0;
+  border-radius:inherit;
+  background:repeating-linear-gradient(90deg,
+    rgba(255,255,255,.16) 0 2px,
+    rgba(255,255,255,0) 2px 27px);
 }
-@keyframes remplir{
-  0%{transform:scaleY(0);opacity:0}
-  55%{opacity:1}
-  72%{transform:scaleY(1.05)}
-  87%{transform:scaleY(.985)}
-  100%{transform:scaleY(1);opacity:1}
-}
-.bulle{
+/* reflet */
+.gelee::after{
+  content:"";
   position:absolute;
-  bottom:5%;
-  left:var(--x);
-  width:var(--d);
-  height:var(--d);
+  left:13%;
+  top:11%;
+  width:36%;
+  height:26%;
   border-radius:50%;
-  background:radial-gradient(circle at 32% 30%,
-    rgba(255,255,255,.96),
-    rgba(255,255,255,.46) 56%,
-    rgba(255,255,255,.10));
-  box-shadow:0 0 0 1px rgba(255,255,255,.32);
-  opacity:0;
-  animation:monter var(--t) linear var(--r) infinite;
+  background:radial-gradient(closest-side,rgba(255,255,255,.72),rgba(255,255,255,0));
+  filter:blur(1px);
 }
-@keyframes monter{
-  0%{transform:translateY(0) scale(.5);opacity:0}
-  14%{opacity:.9}
-  76%{opacity:.72}
-  100%{transform:translateY(calc(-1 * var(--h))) scale(1);opacity:0}
-}
-.soucoupe{
+.assiette{
   position:absolute;
   left:50%;
   bottom:-16px;
-  width:116%;
-  height:32px;
+  width:118%;
+  height:34px;
   transform:translateX(-50%);
-  background:radial-gradient(closest-side,rgba(15,66,87,.24),rgba(15,66,87,0) 78%);
+  background:radial-gradient(closest-side,rgba(120,20,65,.26),rgba(120,20,65,0) 78%);
   z-index:-1;
+}
+@keyframes demouler{
+  0%{opacity:0;transform:translateY(-14px) scaleX(.96) scaleY(1.06)}
+  50%{opacity:1;transform:translateY(0) scaleX(1.04) scaleY(.94)}
+  74%{transform:scaleX(.985) scaleY(1.025)}
+  88%{transform:scaleX(1.008) scaleY(.993)}
+  100%{opacity:1;transform:none}
 }
 
 /* ---------- prix + appel à l'action ---------- */
@@ -234,7 +204,7 @@ p:last-child{margin-bottom:0}
   font-size:50px;
   font-weight:600;
   line-height:1;
-  color:var(--marine);
+  color:var(--framboise);
   font-variant-numeric:lining-nums tabular-nums;
 }
 .prix .mention{font-size:14px;color:var(--encre-doux);font-weight:600}
@@ -245,7 +215,7 @@ p:last-child{margin-bottom:0}
   max-width:420px;
   margin:0 auto;
   padding:19px 24px;
-  background:var(--bleu);
+  background:var(--rose);
   color:#fff;
   border:none;
   border-radius:999px;
@@ -258,9 +228,9 @@ p:last-child{margin-bottom:0}
   box-shadow:var(--ombre);
   transition:background .18s ease,transform .18s ease;
 }
-.action:hover{background:var(--marine)}
+.action:hover{background:var(--framboise)}
 .action:active{transform:translateY(1px)}
-.action:focus-visible{outline:3px solid var(--marine);outline-offset:3px}
+.action:focus-visible{outline:3px solid var(--framboise);outline-offset:3px}
 .sous-action{
   text-align:center;
   font-size:13.5px;
@@ -323,7 +293,7 @@ p:last-child{margin-bottom:0}
   font-family:Fraunces,Georgia,serif;
   font-size:13px;
   font-weight:600;
-  color:var(--bleu);
+  color:var(--rose);
   letter-spacing:.04em;
   white-space:nowrap;
 }
@@ -339,12 +309,12 @@ p:last-child{margin-bottom:0}
   align-items:center;
   justify-content:center;
   border-radius:11px;
-  background:var(--bleu-pale);
+  background:var(--rose-pale);
   border:1px solid var(--ligne);
   font-family:Fraunces,Georgia,serif;
   font-size:15px;
   font-weight:400;
-  color:var(--marine);
+  color:var(--framboise);
   font-variant-numeric:lining-nums tabular-nums;
 }
 .phase p{font-size:15px;color:var(--encre-doux);margin:12px 0 0}
@@ -362,7 +332,7 @@ p:last-child{margin-bottom:0}
 .inclus .rang{
   font-family:Fraunces,Georgia,serif;
   font-size:13px;
-  color:var(--safran);
+  color:var(--or);
   min-width:22px;
   font-variant-numeric:lining-nums tabular-nums;
 }
@@ -391,10 +361,10 @@ details summary::after{
   transform:translateY(-50%);
   font-size:20px;
   font-weight:400;
-  color:var(--bleu);
+  color:var(--rose);
 }
 details[open] summary::after{content:"–"}
-details summary:focus-visible{outline:2px solid var(--marine);outline-offset:2px;border-radius:4px}
+details summary:focus-visible{outline:2px solid var(--framboise);outline-offset:2px;border-radius:4px}
 details .reponse{
   padding:0 4px 18px 0;
   font-size:15.5px;
@@ -404,7 +374,7 @@ details .reponse{
 /* ---------- encart d'achat ---------- */
 .encart{
   background:var(--papier);
-  border:1px solid var(--bleu-clair);
+  border:1px solid var(--rose-clair);
   border-radius:24px;
   padding:34px 26px;
   text-align:center;
@@ -428,7 +398,7 @@ details .reponse{
 
 /* ---------- avertissement + pied ---------- */
 .avertissement{
-  background:var(--bleu-pale);
+  background:var(--rose-pale);
   border:1px solid var(--ligne);
   border-radius:16px;
   padding:22px 20px;
@@ -437,7 +407,6 @@ details .reponse{
   color:var(--encre-doux);
 }
 .avertissement strong{color:var(--encre)}
-.avertissement p{margin-bottom:14px}
 .pied{
   padding:34px 0 46px;
   border-top:1px solid var(--ligne);
@@ -452,8 +421,8 @@ details .reponse{
 .filet{
   display:block;
   margin:0 auto;
-  color:var(--safran);
-  opacity:.6;
+  color:var(--or);
+  opacity:.75;
 }
 
 /* ---------- apparition au défilement ----------
@@ -464,8 +433,7 @@ details .reponse{
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .eau{animation:none}
-  .bulle{animation:none;opacity:.45}
+  .gelee{animation:none}
   .anim .monte{opacity:1;transform:none;transition:none}
   .action{transition:none}
 }
@@ -475,28 +443,17 @@ details .reponse{
 
 <div class="feuille">
 
-  <div class="marque"><b>Bicarbonate</b> <span>Baking Soda Trick</span></div>
+  <div class="marque"><b>Gélatine Rose</b> <span>Pink Gelatin Trick</span></div>
 
   <!-- ============ EN-TÊTE ============ -->
   <header class="bloc hero">
     <p class="oeil">Programme culinaire · 21 jours</p>
-    <h1><span class="fine">L'Astuce du</span><em>Bicarbonate</em></h1>
-    <p class="chapeau">Une astuce au bicarbonate alimentaire, déclinée en 21 jours. Un guide en PDF avec le plan quotidien, les recettes, la liste de courses et le carnet de suivi.</p>
+    <h1><span class="fine">L'Astuce de la</span><em>Gélatine Rose</em></h1>
+    <p class="chapeau">Une recette de gélatine rose, déclinée en 21 jours. Un guide en PDF avec le plan quotidien, les recettes, la liste de courses et le carnet de suivi.</p>
 
-    <div class="effervescence">
-      <div class="verre" aria-hidden="true">
-        <div class="eau"></div>
-        <span class="bulle" style="--x:18%;--d:7px;--t:3.1s;--r:0s;--h:150px"></span>
-        <span class="bulle" style="--x:31%;--d:5px;--t:2.6s;--r:.5s;--h:142px"></span>
-        <span class="bulle" style="--x:44%;--d:9px;--t:3.6s;--r:1.1s;--h:158px"></span>
-        <span class="bulle" style="--x:57%;--d:6px;--t:2.9s;--r:.3s;--h:146px"></span>
-        <span class="bulle" style="--x:70%;--d:8px;--t:3.3s;--r:1.5s;--h:152px"></span>
-        <span class="bulle" style="--x:25%;--d:4px;--t:2.4s;--r:1.9s;--h:136px"></span>
-        <span class="bulle" style="--x:63%;--d:5px;--t:2.8s;--r:2.3s;--h:144px"></span>
-        <span class="bulle" style="--x:38%;--d:6px;--t:3.4s;--r:.9s;--h:154px"></span>
-        <span class="bulle" style="--x:77%;--d:4px;--t:2.5s;--r:1.7s;--h:138px"></span>
-      </div>
-      <div class="soucoupe" aria-hidden="true"></div>
+    <div class="demoulage">
+      <div class="gelee" aria-hidden="true"></div>
+      <div class="assiette" aria-hidden="true"></div>
     </div>
 
     <div class="prix">
@@ -518,7 +475,7 @@ details .reponse{
         <h3>C'est</h3>
         <ul>
           <li>Un guide numérique en PDF, à lire sur téléphone, tablette ou ordinateur</li>
-          <li>Une astuce de base au bicarbonate alimentaire, plus ses variations en cuisine</li>
+          <li>Une recette de base à la gélatine, plus ses variations</li>
           <li>Un plan jour par jour sur 21 jours</li>
           <li>Un fichier à télécharger et à garder</li>
         </ul>
@@ -539,7 +496,7 @@ details .reponse{
   <section class="bloc monte">
     <p class="oeil">Le déroulé</p>
     <h2>Trois semaines, trois temps</h2>
-    <p class="chapeau">Chaque journée tient en une page : le geste du jour, la quantité d'eau visée, et une case à cocher.</p>
+    <p class="chapeau">Chaque journée tient en une page : la recette du jour, la quantité d'eau visée, et une case à cocher.</p>
 
     <div class="phases">
       <div class="phase">
@@ -547,7 +504,7 @@ details .reponse{
         <div class="grille">
           <div class="jour">1</div><div class="jour">2</div><div class="jour">3</div><div class="jour">4</div><div class="jour">5</div><div class="jour">6</div><div class="jour">7</div>
         </div>
-        <p>Vous apprenez à choisir le bon produit — le bicarbonate <em>alimentaire</em>, pas celui du rayon ménager — à le doser à la cuillère près, et vous réalisez la préparation de base jusqu'à la réussir les yeux fermés.</p>
+        <p>Vous préparez votre cuisine, vous faites vos courses une bonne fois, et vous réalisez la recette de base jusqu'à la réussir les yeux fermés.</p>
       </div>
 
       <div class="phase">
@@ -555,7 +512,7 @@ details .reponse{
         <div class="grille">
           <div class="jour">8</div><div class="jour">9</div><div class="jour">10</div><div class="jour">11</div><div class="jour">12</div><div class="jour">13</div><div class="jour">14</div>
         </div>
-        <p>Les variations arrivent : la boisson citronnée du matin, et les usages du bicarbonate en cuisine — légumineuses plus tendres, légumes verts qui gardent leur couleur, pâtisserie plus légère. Vous ajoutez le volet hydratation pour que le geste s'installe dans une vraie journée, pas dans une journée idéale.</p>
+        <p>Les variations arrivent : bol aux fruits, shot du matin. Vous ajoutez le volet hydratation pour que la recette s'installe dans une vraie journée, pas dans une journée idéale.</p>
       </div>
 
       <div class="phase">
@@ -563,7 +520,7 @@ details .reponse{
         <div class="grille">
           <div class="jour">15</div><div class="jour">16</div><div class="jour">17</div><div class="jour">18</div><div class="jour">19</div><div class="jour">20</div><div class="jour">21</div>
         </div>
-        <p>On travaille ce qui fait abandonner les gens : les jours sans envie, les week-ends, les imprévus. Et comment continuer après le 21<sup>e</sup> jour, en gardant les quantités raisonnables.</p>
+        <p>On travaille ce qui fait abandonner les gens : les jours sans envie, les week-ends, les imprévus. Et comment continuer après le 21<sup>e</sup> jour.</p>
       </div>
     </div>
   </section>
@@ -580,11 +537,11 @@ details .reponse{
     <ul class="inclus">
       <li>
         <span class="rang">01</span>
-        <span><span class="quoi">Le protocole</span><span class="detail">La méthode complète, expliquée étape par étape, avec les proportions exactes et le bon moment de la journée.</span></span>
+        <span><span class="quoi">Le protocole</span><span class="detail">La méthode complète, expliquée étape par étape, avec les proportions et le temps de prise.</span></span>
       </li>
       <li>
         <span class="rang">02</span>
-        <span><span class="quoi">Les recettes</span><span class="detail">La boisson au bicarbonate et citron, les usages en cuisine et en pâtisserie, avec les variations.</span></span>
+        <span><span class="quoi">Les recettes</span><span class="detail">La gélatine rose classique, le bol rose aux fruits et le shot rose du matin, avec les variations.</span></span>
       </li>
       <li>
         <span class="rang">03</span>
@@ -598,10 +555,6 @@ details .reponse{
         <span class="rang">05</span>
         <span><span class="quoi">La liste de courses</span><span class="detail">Les ingrédients d'une semaine, regroupés par rayon.</span></span>
       </li>
-      <li>
-        <span class="rang">06</span>
-        <span><span class="quoi">Les limites à connaître</span><span class="detail">Les quantités à ne pas dépasser, les situations où le bicarbonate est déconseillé, et quand demander l'avis d'un professionnel de santé.</span></span>
-      </li>
     </ul>
   </section>
 
@@ -609,8 +562,8 @@ details .reponse{
   <section class="bloc monte">
     <p class="oeil">Avant d'acheter</p>
     <h2>À qui ça s'adresse</h2>
-    <p>Ce programme est fait pour vous si vous aimez cuisiner simple, si vous cherchez un geste à répéter sans y réfléchir, et si vous savez qu'un cadre de 21 jours vous aide à tenir.</p>
-    <p class="doux">Il ne vous conviendra pas si vous attendez un résultat physique précis, si vous suivez un régime prescrit par un professionnel de santé, ou si vous devez limiter votre apport en sel : le bicarbonate de sodium apporte du sodium. En cas d'hypertension, d'insuffisance rénale ou cardiaque, ou de régime sans sel, ce programme n'est pas adapté et nous vous déconseillons de l'acheter.</p>
+    <p>Ce programme est fait pour vous si vous aimez cuisiner simple, si vous cherchez une recette à répéter sans y réfléchir, et si vous savez qu'un cadre de 21 jours vous aide à tenir.</p>
+    <p class="doux">Il ne vous conviendra pas si vous attendez un résultat physique précis, si vous suivez un régime prescrit par un professionnel de santé, ou si vous ne consommez pas de gélatine d'origine animale : les recettes en contiennent.</p>
   </section>
 
   <!-- ============ QUESTIONS ============ -->
@@ -631,16 +584,16 @@ details .reponse{
       <div class="reponse">Oui. Une fois téléchargé, le guide vous appartient : vous le gardez sur votre appareil, vous pouvez l'imprimer et le relire quand vous voulez.</div>
     </details>
     <details>
-      <summary>Quel bicarbonate faut-il acheter ?</summary>
-      <div class="reponse">Uniquement du bicarbonate de sodium <strong>de qualité alimentaire</strong>, vendu au rayon épicerie ou en pharmacie, avec la mention « alimentaire » sur le paquet. Le bicarbonate technique ou ménager, vendu pour le nettoyage, ne doit jamais être consommé. Le guide explique comment les distinguer en magasin.</div>
+      <summary>Faut-il du matériel particulier ?</summary>
+      <div class="reponse">Non. Une casserole, un fouet, des ramequins ou un moule, et un réfrigérateur. Les ingrédients se trouvent en supermarché.</div>
     </details>
     <details>
-      <summary>Faut-il du matériel particulier ?</summary>
-      <div class="reponse">Non. Un verre, une cuillère doseuse et de l'eau. Les ingrédients se trouvent en supermarché.</div>
+      <summary>Est-ce adapté à un régime végétarien ou halal ?</summary>
+      <div class="reponse">Les recettes utilisent de la gélatine d'origine animale. Si cela ne vous convient pas, ce programme n'est pas adapté et nous vous déconseillons de l'acheter.</div>
     </details>
     <details>
       <summary>Puis-je le suivre si j'ai un problème de santé ?</summary>
-      <div class="reponse">Il s'agit de recettes de cuisine, pas d'un protocole de santé. Le bicarbonate de sodium apporte du sodium : il est déconseillé en cas de régime pauvre en sel, d'hypertension, d'insuffisance rénale ou cardiaque. Il peut aussi modifier l'absorption de certains médicaments. En cas de maladie, de grossesse, d'allaitement, d'allergie ou de traitement en cours, demandez l'avis de votre médecin ou de votre pharmacien avant de modifier votre alimentation.</div>
+      <div class="reponse">Il s'agit de recettes de cuisine, pas d'un protocole de santé. En cas de maladie, de grossesse, d'allaitement, d'allergie ou de traitement en cours, demandez l'avis de votre médecin avant de modifier votre alimentation.</div>
     </details>
     <details>
       <summary>Quelles sont les conditions de rétractation ?</summary>
@@ -656,8 +609,8 @@ details .reponse{
   <section class="bloc monte">
     <div class="encart">
       <p class="oeil">L'offre</p>
-      <h2>L'Astuce du Bicarbonate</h2>
-      <p class="recap">Le guide complet des 21 jours : le protocole, les recettes, le carnet de suivi, la liste de courses et les limites à connaître.</p>
+      <h2>L'Astuce de la Gélatine Rose</h2>
+      <p class="recap">Le guide complet des 21 jours : le protocole, les recettes, le carnet de suivi et la liste de courses.</p>
 
       <div class="prix">
         <span class="montant">17 €</span>
@@ -674,10 +627,8 @@ details .reponse{
   <!-- ============ AVERTISSEMENT ============ -->
   <section class="bloc monte">
     <div class="avertissement">
-      <p><strong>Information importante.</strong> L'Astuce du Bicarbonate est un programme culinaire et de bien-être à visée éducative. Ce n'est pas un médicament, ni un complément alimentaire, ni un dispositif médical, et il ne remplace en aucun cas l'avis d'un médecin, d'un pharmacien ou d'un diététicien.</p>
+      <p><strong>Information importante.</strong> L'Astuce de la Gélatine Rose est un programme culinaire et de bien-être à visée éducative. Ce n'est pas un médicament, ni un complément alimentaire, ni un dispositif médical, et il ne remplace en aucun cas l'avis d'un médecin, d'un pharmacien ou d'un diététicien.</p>
       <p>Aucun résultat de santé, de perte de poids ou de transformation physique n'est promis ni garanti. Les recettes proposées s'inscrivent dans le cadre d'une alimentation variée et équilibrée et d'un mode de vie actif.</p>
-      <p><strong>Bicarbonate alimentaire uniquement.</strong> Le programme utilise exclusivement du bicarbonate de sodium de qualité alimentaire, dans des quantités culinaires. Le bicarbonate technique ou ménager ne doit jamais être ingéré. Ne dépassez pas les quantités indiquées et n'en faites pas un usage prolongé sans avis médical.</p>
-      <p><strong>Apport en sodium.</strong> Le bicarbonate de sodium apporte du sodium. Il est déconseillé en cas de régime pauvre en sel, d'hypertension artérielle, d'insuffisance rénale ou cardiaque. Il peut également modifier l'absorption de certains médicaments : espacez les prises et demandez conseil à votre pharmacien.</p>
       <p style="margin-bottom:0">Si vous êtes enceinte ou allaitante, si vous suivez un traitement, ou si vous présentez une allergie ou une pathologie, consultez un professionnel de santé avant toute modification de votre alimentation.</p>
     </div>
   </section>
@@ -687,7 +638,7 @@ details .reponse{
     <nav>
       <a href="mailto:contact@example.com">contact@example.com</a>
     </nav>
-    <p style="margin:0">© 2026 Bicarbonate. Tous droits réservés.</p>
+    <p style="margin:0">© 2026 Gélatine Rose. Tous droits réservés.</p>
   </footer>
 
 </div>
