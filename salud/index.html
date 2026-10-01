@@ -1,0 +1,443 @@
+<!DOCTYPE html><html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bienestar Masculino | Hábitos diarios</title>
+  <meta name="description" content="Cinco hábitos sencillos que muchos hombres están incorporando a su rutina para cuidar la energía, el descanso y el bienestar general.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fbf8f3;
+      --paper:#ffffff;
+      --text:#1c1e22;
+      --muted:#5d636b;
+      --line:#ebe5da;
+      --accent:#b4621a;
+      --accent-dark:#8f4c12;
+      --accent-soft:#f7ede1;
+      --green:#2f7a4f;
+      --green-soft:#e8f3ec;
+      --max:700px;
+      --serif:"Fraunces", Georgia, "Times New Roman", serif;
+      --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--accent)}
+    svg{display:block}
+
+    /* Barra de progreso de lectura */
+    .progress{
+      position:fixed;top:0;left:0;height:3px;width:0;
+      background:var(--accent);z-index:50;
+    }
+
+    /* Cabecera */
+    .topbar{background:var(--paper);border-bottom:1px solid var(--line)}
+    .topbar .in{
+      max-width:var(--max);margin:0 auto;padding:14px 16px;
+      display:flex;justify-content:space-between;align-items:center;gap:12px;
+    }
+    .logo{
+      font-family:var(--serif);font-weight:700;font-size:21px;
+      letter-spacing:-.3px;color:var(--text);text-decoration:none;
+    }
+    .logo span{color:var(--accent)}
+    .topbar nav{font-size:13px;color:var(--muted)}
+    @media (max-width:420px){.topbar nav{display:none}}
+
+    article{max-width:var(--max);margin:0 auto;padding:30px 16px 40px}
+
+    .cat{
+      display:inline-block;font-size:12px;font-weight:700;letter-spacing:1px;
+      text-transform:uppercase;color:var(--accent);background:var(--accent-soft);
+      padding:4px 10px;border-radius:999px;margin-bottom:14px;
+    }
+    h1{
+      font-family:var(--serif);font-weight:700;
+      font-size:clamp(28px,6.4vw,42px);line-height:1.12;
+      letter-spacing:-.6px;margin:0 0 14px;
+    }
+    .dek{font-size:18.5px;color:var(--muted);margin:0 0 20px;line-height:1.6}
+
+    .byline{
+      display:flex;align-items:center;gap:12px;
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      padding:12px 0;margin-bottom:26px;font-size:13.5px;color:var(--muted);
+    }
+    .avatar{
+      width:38px;height:38px;border-radius:50%;flex:none;
+      background:var(--accent-soft);color:var(--accent);
+      display:flex;align-items:center;justify-content:center;
+      font-family:var(--serif);font-weight:700;
+    }
+    .byline strong{color:var(--text);font-weight:600}
+
+    .hero-art{border-radius:14px;overflow:hidden;margin-bottom:8px}
+    .hero-art svg{width:100%;height:auto}
+    .caption{font-size:12.5px;color:var(--muted);margin:0 0 28px}
+
+    /* Resumen */
+    .summary{
+      background:var(--paper);border:1px solid var(--line);border-radius:12px;
+      padding:18px 20px;margin:0 0 30px;
+    }
+    .summary h3{
+      margin:0 0 10px;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);
+    }
+    .summary ol{margin:0;padding-left:20px}
+    .summary li{margin:4px 0;font-size:16px}
+    .summary a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--line)}
+    .summary a:hover{border-color:var(--accent)}
+
+    article > p{font-size:17.5px;margin:0 0 18px}
+    .lead::first-letter{
+      font-family:var(--serif);font-weight:700;float:left;
+      font-size:58px;line-height:.9;padding:6px 8px 0 0;color:var(--accent);
+    }
+
+    h2{
+      font-family:var(--serif);font-weight:700;font-size:25px;line-height:1.25;
+      margin:40px 0 12px;scroll-margin-top:16px;
+      display:flex;gap:12px;align-items:flex-start;
+    }
+    h2 .n{
+      flex:none;width:34px;height:34px;border-radius:50%;
+      background:var(--accent);color:#fff;font-family:var(--sans);
+      font-size:16px;display:flex;align-items:center;justify-content:center;margin-top:1px;
+    }
+
+    .tip{
+      background:var(--green-soft);border-left:4px solid var(--green);
+      border-radius:0 10px 10px 0;padding:14px 18px;margin:20px 0 24px;font-size:16px;
+    }
+    .tip strong{color:var(--green)}
+
+    blockquote{
+      margin:30px 0;padding:6px 0 6px 20px;border-left:3px solid var(--accent);
+      font-family:var(--serif);font-size:22px;line-height:1.4;color:#3a3d42;
+    }
+
+    .box{background:var(--accent-soft);border-radius:12px;padding:20px 22px;margin:26px 0}
+    .box h3{margin:0 0 10px;font-size:17px}
+    .steps{list-style:none;margin:0;padding:0}
+    .steps li{display:flex;gap:12px;align-items:flex-start;margin:8px 0;font-size:16px}
+    .steps .ic{
+      flex:none;width:28px;height:28px;border-radius:8px;background:#fff;
+      display:flex;align-items:center;justify-content:center;font-size:15px;
+    }
+
+    /* Mención intermedia */
+    .inline-cta{
+      display:flex;gap:14px;align-items:center;
+      background:var(--paper);border:1px dashed #d9c7b0;border-radius:12px;
+      padding:14px 16px;margin:28px 0;font-size:15px;color:var(--muted);
+    }
+    .inline-cta .jar{flex:none;width:44px}
+    .inline-cta a{font-weight:600}
+
+    /* Tarjeta de la guía */
+    .guide{
+      background:var(--paper);border:1px solid var(--line);border-radius:16px;
+      overflow:hidden;margin:40px 0 10px;box-shadow:0 12px 30px rgba(60,40,20,.08);
+    }
+    .guide-head{
+      background:linear-gradient(135deg,#fbe9d2 0%,#f1c891 100%);
+      padding:22px 22px 18px;display:flex;gap:16px;align-items:center;
+    }
+    .guide-head .jar{flex:none;width:64px}
+    .guide .lbl{
+      font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+      color:var(--accent-dark);margin:0 0 2px;
+    }
+    .guide h3{font-family:var(--serif);font-size:25px;margin:0;line-height:1.2}
+    .guide-body{padding:20px 22px 24px}
+    .guide-body > p{font-size:16px;margin:0 0 14px}
+    .checks{list-style:none;padding:0;margin:0 0 20px}
+    .checks li{
+      position:relative;padding-left:28px;margin:8px 0;font-size:15.5px;
+    }
+    .checks li::before{
+      content:"";position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;
+      background:var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%232f7a4f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat;
+    }
+    .btn{
+      display:block;text-align:center;background:var(--accent);color:#fff;
+      text-decoration:none;font-weight:700;font-size:17px;
+      padding:16px 22px;border-radius:10px;
+      box-shadow:0 6px 16px rgba(180,98,26,.28);transition:background .15s;
+    }
+    .btn:hover{background:var(--accent-dark)}
+    .trust{
+      display:flex;justify-content:center;flex-wrap:wrap;gap:6px 16px;
+      margin:12px 0 0;font-size:13px;color:var(--muted);
+    }
+    .note{font-size:12.5px;color:var(--muted);text-align:center;margin:12px 0 0}
+
+    /* Preguntas */
+    .faq{margin-top:40px}
+    .faq h2{margin-top:0}
+    details{
+      background:var(--paper);border:1px solid var(--line);border-radius:10px;
+      padding:0 18px;margin:10px 0;
+    }
+    summary{
+      cursor:pointer;list-style:none;font-weight:600;padding:14px 0;font-size:16px;
+      display:flex;justify-content:space-between;gap:10px;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";color:var(--accent);font-size:20px;line-height:1}
+    details[open] summary::after{content:"–"}
+    details p{margin:0 0 14px;font-size:15.5px;color:var(--muted)}
+
+    .refs{font-size:13px;color:var(--muted);margin-top:34px;border-top:1px solid var(--line);padding-top:16px}
+    .refs h4{margin:0 0 6px;font-size:13px;color:var(--text)}
+    .refs ul{margin:0;padding-left:18px}
+
+    /* CTA fijo en móvil */
+    .sticky{
+      position:fixed;left:0;right:0;bottom:0;z-index:40;
+      background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+      border-top:1px solid var(--line);padding:10px 16px;
+      display:flex;gap:12px;align-items:center;justify-content:space-between;
+      transform:translateY(110%);transition:transform .25s ease;
+    }
+    .sticky.show{transform:none}
+    .sticky span{font-size:13.5px;color:var(--muted);line-height:1.3}
+    .sticky strong{display:block;color:var(--text);font-size:14.5px}
+    .sticky a{
+      flex:none;background:var(--accent);color:#fff;text-decoration:none;
+      font-weight:700;font-size:14.5px;padding:11px 16px;border-radius:8px;
+    }
+    @media (min-width:900px){.sticky{display:none}}
+
+    footer{border-top:1px solid var(--line);background:var(--paper)}
+    footer .in{
+      max-width:var(--max);margin:0 auto;padding:24px 16px 90px;
+      font-size:13px;color:var(--muted);
+    }
+    footer h4{font-size:13px;color:var(--text);margin:16px 0 4px}
+    footer p{margin:0 0 8px}
+    footer .links{margin-top:16px;display:flex;gap:16px;flex-wrap:wrap}
+    footer .links a{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="topbar">
+    <div class="in">
+      <a class="logo" href="#">Vida<span>Plena</span></a>
+      <nav>Salud · Hábitos · Nutrición</nav>
+    </div>
+  </header>
+
+  <article>
+    <span class="cat">Salud masculina</span>
+    <h1>Cinco hábitos sencillos que muchos hombres están sumando a su rutina después de los 40</h1>
+    <p class="dek">Descanso, alimentación, movimiento y manejo del estrés: pequeños ajustes diarios que ayudan a sentirse con más disposición, sin fórmulas mágicas.</p>
+
+    <div class="byline">
+      <div class="avatar">VP</div>
+      <div><strong>Redacción VidaPlena</strong><br>Lectura de 5 minutos · Bienestar y hábitos</div>
+    </div>
+
+    <figure class="hero-art" style="margin:0 0 8px">
+      <svg viewBox="0 0 800 420" role="img" aria-label="Ilustración de un desayuno con miel al amanecer">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fde7c8"/>
+            <stop offset="1" stop-color="#f4c389"/>
+          </linearGradient>
+          <linearGradient id="honey" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f6b445"/>
+            <stop offset="1" stop-color="#d9831c"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="420" fill="url(#sky)"/>
+        <circle cx="620" cy="150" r="70" fill="#fff4dc" opacity=".85"/>
+        <path d="M0 300 Q200 250 400 290 T800 270 V420 H0Z" fill="#e9a960" opacity=".55"/>
+        <rect x="0" y="330" width="800" height="90" fill="#c98845"/>
+        <rect x="0" y="330" width="800" height="8" fill="#b5762f"/>
+        <!-- frasco de miel -->
+        <rect x="250" y="190" width="130" height="150" rx="26" fill="url(#honey)"/>
+        <rect x="262" y="172" width="106" height="28" rx="8" fill="#8f4c12"/>
+        <rect x="270" y="240" width="90" height="46" rx="8" fill="#fff8ec" opacity=".9"/>
+        <path d="M290 263 h50" stroke="#b4621a" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="290" cy="215" rx="10" ry="18" fill="#fff" opacity=".35"/>
+        <!-- taza -->
+        <rect x="440" y="250" width="100" height="90" rx="16" fill="#fff"/>
+        <path d="M540 270 q34 0 34 28 t-34 28" fill="none" stroke="#fff" stroke-width="12"/>
+        <rect x="448" y="258" width="84" height="16" rx="6" fill="#c98a4a"/>
+        <path d="M470 230 q10 -14 0 -28 M500 230 q10 -14 0 -28" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".8"/>
+        <!-- bol con avena -->
+        <path d="M110 290 h120 a60 50 0 0 1 -120 0Z" fill="#fff"/>
+        <ellipse cx="170" cy="290" rx="60" ry="10" fill="#f3dfbf"/>
+        <circle cx="150" cy="286" r="7" fill="#c0392b"/>
+        <circle cx="172" cy="284" r="7" fill="#7b3fa0"/>
+        <circle cx="192" cy="287" r="6" fill="#c0392b"/>
+        <!-- limón -->
+        <ellipse cx="620" cy="320" rx="38" ry="26" fill="#f7d54a"/>
+        <ellipse cx="660" cy="326" rx="22" ry="16" fill="#f2c529"/>
+      </svg>
+    </figure>
+    <p class="caption">Una rutina matinal simple puede marcar el tono de todo el día.</p>
+
+    <nav class="summary" aria-label="En este artículo">
+      <h3>En este artículo</h3>
+      <ol>
+        <li><a href="#h1">Dormir mejor, no solo más</a></li>
+        <li><a href="#h2">Moverse todos los días</a></li>
+        <li><a href="#h3">Volver a la cocina simple</a></li>
+        <li><a href="#h4">Hidratarse durante el día</a></li>
+        <li><a href="#h5">Cuidar la cabeza y hacer chequeos</a></li>
+      </ol>
+    </nav>
+
+    <p class="lead">Con el paso de los años, es común que muchos hombres noten cambios en su día a día: menos energía por la tarde, un sueño más ligero, más cansancio después del trabajo. Gran parte de eso tiene que ver con el ritmo de vida moderno: poco movimiento, comidas apuradas, muchas horas frente a pantallas y estrés acumulado.</p>
+    <p>La buena noticia es que el cuerpo responde bien a la constancia. No se trata de cambiar todo de un día para otro, sino de incorporar hábitos pequeños que se puedan mantener en el tiempo. Reunimos cinco de los más simples.</p>
+
+    <h2 id="h1"><span class="n">1</span>Dormir mejor, no solo más</h2>
+    <p>La calidad del descanso influye en el humor, la concentración y la disposición física. Mantener horarios regulares para acostarse y levantarse, evitar pantallas en la última hora antes de dormir y cenar más liviano son cambios fáciles de aplicar.</p>
+    <p>Un dormitorio oscuro, silencioso y fresco también ayuda. Para la mayoría de los adultos, entre siete y nueve horas por noche es la referencia más citada.</p>
+    <div class="tip"><strong>Prueba esta semana:</strong> pon una alarma 30 minutos antes de la hora de dormir para apagar el celular y bajar las luces.</div>
+
+    <h2 id="h2"><span class="n">2</span>Moverse todos los días</h2>
+    <p>No hace falta un gimnasio. Caminar 30 minutos, subir escaleras o hacer ejercicios de movilidad en casa ya favorece la circulación, la postura y el estado de ánimo. Para quien pasa muchas horas sentado, levantarse y estirarse cada hora hace diferencia.</p>
+    <p>La Organización Mundial de la Salud recomienda que los adultos acumulen al menos 150 minutos de actividad física moderada por semana. Sumar ejercicios de fuerza dos veces por semana ayuda a mantener la masa muscular, algo que tiende a disminuir con la edad.</p>
+
+    <blockquote>"El mejor ejercicio es el que logras repetir mañana."</blockquote>
+
+    <h2 id="h3"><span class="n">3</span>Volver a la cocina simple</h2>
+    <p>Una alimentación basada en alimentos frescos (verduras, frutas, legumbres, huevos, pescado, frutos secos) es la base de cualquier rutina saludable. Reducir ultraprocesados, azúcar refinada y exceso de alcohol suele traer beneficios que se notan en pocas semanas.</p>
+    <p>Muchas culturas mantienen ingredientes tradicionales en el desayuno, como la miel, la avena, el jengibre o la canela. Usados con moderación, pueden ser una alternativa más natural para endulzar y dar sabor, dentro de una dieta equilibrada.</p>
+
+    <div class="box">
+      <h3>Idea rápida para la mañana</h3>
+      <ul class="steps">
+        <li><span class="ic">💧</span>Un vaso de agua al despertar</li>
+        <li><span class="ic">🥣</span>Avena con fruta y una cucharadita de miel</li>
+        <li><span class="ic">🧘</span>Cinco minutos de estiramiento antes de salir</li>
+      </ul>
+    </div>
+
+    <div class="inline-cta">
+      <svg class="jar" viewBox="0 0 64 64" aria-hidden="true"><rect x="14" y="8" width="36" height="10" rx="3" fill="#8f4c12"/><rect x="10" y="16" width="44" height="42" rx="10" fill="#e39a2d"/><rect x="18" y="30" width="28" height="14" rx="3" fill="#fff8ec"/></svg>
+      <div>¿Quieres más recetas como esta? La guía <a href="https://checkout.kashpay.com.br/checkout/checkout-1790478865251" rel="nofollow sponsored">Honey Trick Protocol</a> reúne opciones con miel e ingredientes de cocina.</div>
+    </div>
+
+    <h2 id="h4"><span class="n">4</span>Hidratarse durante el día</h2>
+    <p>Muchas veces el cansancio de la tarde está relacionado con beber poca agua. Tener una botella a la vista en el trabajo y tomar agua antes de cada comida son formas simples de crear el hábito. El café y las bebidas azucaradas no reemplazan al agua.</p>
+    <div class="tip"><strong>Truco sencillo:</strong> asocia un vaso de agua a algo que ya haces todos los días, como el café de la mañana o el almuerzo.</div>
+
+    <h2 id="h5"><span class="n">5</span>Cuidar la cabeza y hacer chequeos</h2>
+    <p>El estrés constante afecta el sueño, el apetito y la disposición. Reservar momentos para desconectarse, respirar con calma, pasar tiempo al aire libre o con amigos forma parte del cuidado de la salud.</p>
+    <p>Y un punto que muchos hombres dejan de lado: los controles médicos periódicos. Consultar al médico con regularidad, sobre todo a partir de los 40, permite acompañar la presión arterial, el colesterol, la glucosa y otros indicadores importantes.</p>
+
+    <h2>Lo que realmente importa: la constancia</h2>
+    <p>Ninguno de estos hábitos funciona como una solución instantánea. El efecto aparece cuando se repiten semana tras semana. Por eso, lo más útil es empezar con uno o dos cambios, sostenerlos y después sumar los demás.</p>
+    <p>Para quien prefiere tener todo organizado en un solo lugar, existen guías prácticas que reúnen recetas, rutinas y orientaciones de hábitos en un formato fácil de seguir.</p>
+
+    <section class="guide" id="guia">
+      <div class="guide-head">
+        <svg class="jar" viewBox="0 0 64 64" aria-hidden="true"><rect x="14" y="8" width="36" height="10" rx="3" fill="#8f4c12"/><rect x="10" y="16" width="44" height="42" rx="10" fill="#e39a2d"/><rect x="18" y="30" width="28" height="14" rx="3" fill="#fff8ec"/><path d="M24 37h16" stroke="#b4621a" stroke-width="3" stroke-linecap="round"/></svg>
+        <div>
+          <p class="lbl">Material recomendado</p>
+          <h3>Honey Trick Protocol</h3>
+        </div>
+      </div>
+      <div class="guide-body">
+        <p>Una guía digital pensada para hombres que quieren una rutina más saludable, con todo explicado paso a paso:</p>
+        <ul class="checks">
+          <li>Recetas rápidas con miel e ingredientes comunes de cocina</li>
+          <li>Rutina matinal de 10 minutos para empezar el día</li>
+          <li>Orientaciones de alimentación equilibrada e hidratación</li>
+          <li>Consejos para mejorar la calidad del descanso</li>
+          <li>Ejercicios ligeros de movilidad para hacer en casa</li>
+        </ul>
+        <a class="btn" href="https://checkout.kashpay.com.br/checkout/checkout-1790478865251" rel="nofollow sponsored">Quiero acceder a la guía</a>
+        <div class="trust"><span>📘 Formato digital</span><span>📩 Acceso por correo</span><span>🔒 Pago seguro</span></div>
+        <p class="note">No es un medicamento ni un tratamiento. Ningún producto físico es enviado.</p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>Preguntas frecuentes</h2>
+      <details>
+        <summary>¿Qué es exactamente la guía?</summary>
+        <p>Es un material digital con recetas, rutinas y orientaciones de hábitos. Se accede desde el celular o la computadora.</p>
+      </details>
+      <details>
+        <summary>¿Necesito ingredientes difíciles de encontrar?</summary>
+        <p>No. Las recetas usan miel y otros ingredientes comunes que se encuentran en cualquier supermercado.</p>
+      </details>
+      <details>
+        <summary>¿Sustituye una consulta médica?</summary>
+        <p>No. El contenido es educativo y no reemplaza el diagnóstico ni el tratamiento de un profesional de la salud. Si tienes diabetes, alergias u otra condición, consulta a tu médico antes de cambiar tu alimentación.</p>
+      </details>
+      <details>
+        <summary>¿Cuándo voy a notar diferencia?</summary>
+        <p>Cada persona es diferente. Los hábitos dependen de la constancia, del estilo de vida y de factores individuales, por lo que no se garantizan resultados específicos.</p>
+      </details>
+    </section>
+
+    <div class="refs">
+      <h4>Referencias</h4>
+      <ul>
+        <li>Organización Mundial de la Salud (OMS). Directrices sobre actividad física y hábitos sedentarios, 2020.</li>
+        <li>American Academy of Sleep Medicine. Recomendaciones de duración del sueño para adultos.</li>
+      </ul>
+    </div>
+  </article>
+
+  <div class="sticky" id="sticky">
+    <span><strong>Honey Trick Protocol</strong>Guía digital de hábitos</span>
+    <a href="https://checkout.kashpay.com.br/checkout/checkout-1790478865251" rel="nofollow sponsored">Acceder</a>
+  </div>
+
+  <footer>
+    <div class="in">
+      <h4 id="legal">Aviso importante</h4>
+      <p>El contenido de este sitio tiene fines exclusivamente educativos e informativos y no constituye consejo médico. No está destinado a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Consulta siempre a un profesional de la salud antes de cambiar tu alimentación o rutina de ejercicios, especialmente si tienes alguna condición médica. Los resultados pueden variar de persona a persona.</p>
+      <p>Este artículo menciona productos de terceros. Podemos recibir una comisión por compras realizadas a través de los enlaces.</p>
+      <h4 id="privacidad">Política de privacidad</h4>
+      <p>No recopilamos datos personales en esta página. Los datos informados en la compra de productos mencionados son tratados por el vendedor correspondiente.</p>
+      <h4 id="terminos">Términos de uso</h4>
+      <p>Al acceder a este sitio, aceptas que su contenido es informativo y de uso personal. Queda prohibida su reproducción sin autorización.</p>
+      <div class="links">
+        <a href="#privacidad">Privacidad</a>
+        <a href="#terminos">Términos</a>
+        <a href="#legal">Aviso legal</a>
+      </div>
+      <p style="margin-top:16px;">© <span id="year"></span> VidaPlena. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    (function(){
+      var bar = document.getElementById("progress");
+      var sticky = document.getElementById("sticky");
+      var guide = document.getElementById("guia");
+      function onScroll(){
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+        var r = guide.getBoundingClientRect();
+        var guideVisible = r.top < window.innerHeight && r.bottom > 0;
+        sticky.classList.toggle("show", h.scrollTop > 700 && !guideVisible);
+      }
+      window.addEventListener("scroll", onScroll, {passive:true});
+      onScroll();
+    })();
+  </script>
+</body></html>
